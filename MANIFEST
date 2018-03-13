@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST
+README.rst
+requirements.txt
+setup.py
+__init__.py
+config.py
+news.py

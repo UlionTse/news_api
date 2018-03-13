@@ -1,0 +1,6 @@
+pymysql
+requests
+jieba
+snownlp
+beautifulsoup4
+true_encoding

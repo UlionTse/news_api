@@ -1,0 +1,5 @@
+include *.rst
+include *.txt
+include LICENSE
+include MANIFEST
+recursive-include news_api *.py
