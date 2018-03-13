@@ -24,11 +24,11 @@ from html import unescape
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
 from true_encoding.debug import debug
-from config import *
+from .news_config import *
 
 
 
-class News:
+class BaiduNews:
     def __init__(self,pymysql_conn=None,tableName='News'):
         self.host = 'http://news.baidu.com/ns?'
         self.tm = time.time()
@@ -320,7 +320,7 @@ def generate(keyPool=None,outTitle=None,outContent=None,minLength=200,perKeyNum=
     outTitle = outTitle or NO_TITLE
     outContent = outContent or NO_CONTENT
 
-    news = News(pymysql_conn,tableName)
+    news = BaiduNews(pymysql_conn,tableName)
     saveNum = 0
     try:
         page = perKeyNum // 20 - 1 if perKeyNum >= 20 else 0
