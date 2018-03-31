@@ -24,8 +24,9 @@ conn = pymysql.connect(host='xxx.xx.xx.xx',
                        charset='utf8mb4',
                        cursorclass=pymysql.cursors.DictCursor)
                                
-keyPool = {'新闻': ['科技', '财经', '体育']}
-news.generate(keyPool=keyPool,pymysql_conn=conn,tableName='t_news')
+keyPool = {'体育': ['NBA', '英超', '电竞'], 'python': ['pytorch','pyspark']}
+for data in news.generate(keyPool=keyPool,pymysql_conn=conn,tableName='t_news'):
+    print(data)
 
 # run, see luck in your database!
 ```
