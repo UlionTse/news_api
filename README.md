@@ -28,7 +28,7 @@ conn = pymysql.connect(host='xxx.xx.xx.xx',
                        charset='utf8mb4',
                        cursorclass=pymysql.cursors.DictCursor)
                                
-keyPool = {'体育': ['NBA', '英超', '电竞'], 'python': ['pytorch','pyspark']}
+keyPool = {'sports': ['NBA', 'NFL', 'F1'], 'AI': ['pytorch','tensorflow','sklearn']}
 for data in news.generate(keyPool=keyPool,pymysql_conn=conn,tableName='t_news'):
     print(data)
 ```
