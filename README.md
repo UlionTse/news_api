@@ -4,8 +4,6 @@
 - *Usage:*
 
 ```python
-## print_json_model:
-
 from news_api import news
 
 for data in news.generate():
@@ -15,8 +13,6 @@ for data in news.generate():
 
 
 ```python
-## saveDB_pipeline_model: 
-
 import pymysql
 from news_api import news
 
@@ -28,9 +24,10 @@ conn = pymysql.connect(host='xxx.xx.xx.xx',
                        charset='utf8mb4',
                        cursorclass=pymysql.cursors.DictCursor)
                                
-keyPool = {'sports': ['NBA', 'NFL', 'F1'], 'AI': ['pytorch','tensorflow','sklearn']}
-for data in news.generate(keyPool=keyPool,pymysql_conn=conn,tableName='t_news'):
-    print(data)
+keyPool = {'新闻': ['科技', '财经', '体育']}
+news.generate(keyPool=keyPool,pymysql_conn=conn,tableName='t_news')
+
+# run, see luck in your database!
 ```
 
 

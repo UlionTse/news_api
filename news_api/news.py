@@ -90,7 +90,7 @@ class BaiduNews:
                 return see_time
             if ((X in tm) and (X == '日')):
                 see_time = tm.replace('年', '-').replace('月', '-').replace(X, '')
-                return see_time + ':00'
+                return see_time.strip() + ':00'
 
     def get_baidu(self, keyword, page=0):
         if page == 0:
@@ -305,7 +305,7 @@ class BaiduNews:
 
 def generate(keyPool=None,outTitle=None,outContent=None,minLength=200,perKeyNum=20,pymysql_conn=None,tableName='News',sentimentApi=None):
     '''
-    :param keyPool: dict, eg: {'新闻': ['科技', '财经', '体育'],}
+    :param keyPool: dict, eg: keyPool = {'AI': ['pytorch','tensorflow','sklearn']}
     :param outTitle:  list, eg: ['怎么', '好用吗', '什么是', '有什么', '直播：', '视频：']
     :param outContent: list, eg: ['http://', 'var', 'function']
     :param minLength: int,

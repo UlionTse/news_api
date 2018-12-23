@@ -5,7 +5,7 @@ NO_TITLE = ['怎么', '好用吗', '什么是', '有什么', '直播：', '视�
 NO_CONTENT = ['http://', 'var', 'function']
 
 
-ITEM_POOL = {'新闻': ['科技', '财经', '体育'],}
+ITEM_POOL = {'AI': ['pytorch','tensorflow','sklearn']}
 
 
 PARSE_POOL = {
